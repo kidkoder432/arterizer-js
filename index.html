@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="" name="descri  ption">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <meta content="" property="og:title">
+    <meta content="" property="og:type">
+    <meta content="" property="og:url">
+    <meta content="" property="og:image">
+
+    <link href="site.webmanifest" rel="manifest">
+    <link href="icon.png" rel="apple-touch-icon">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <meta content="#fafafa" name="theme-color">
+</head>
+
+<body>
+
+<h1>Arterizer</h1>
+<p>Upload an image and make it into an artistic painting!</p>
+<div id="inputs">
+    <label for="imup" id="l1">Upload Image to Arterize</label>
+    <input accept=".png, .jpeg, .jpg" id='imup' name="imup" type="file"><br>
+    <div class="slidecontainer">
+        <label for="myRange">Blur factor: <span id="val">5</span></label>
+        <input class="slider" id="myRange" max="50" min="1" type="range" value="5">
+
+    </div>
+</div>
+<div id="images">
+    <label for="preview">Before: </label>
+    <div id="preview">
+    </div>
+    <label for="art">After: </label>
+    <canvas id="art"></canvas>
+</div>
+
+<br>
+<button onclick="processImg()">Arterize!</button>
+<label for="convProg">Progress: </label>
+<progress id='convProg' max="1" value="0.01">1%</progress>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
